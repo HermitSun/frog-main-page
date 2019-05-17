@@ -8,9 +8,10 @@
     <!--LOGO-->
     <el-menu-item class="cursor-default left"
                   disabled>
-      <el-image :src="require('assets/images/logo.png')"
-                @click="$router.push('/')"
-                alt="logo" id="logo"></el-image>
+      <!--      <el-image :src="require('assets/images/logo.png')"-->
+      <!--                @click="$router.push('/')"-->
+      <!--                alt="logo" id="logo"></el-image>-->
+      <p id="logo">上海昱辰网络科技有限公司</p>
     </el-menu-item>
     <!--导航-->
     <template v-for="item of navItems">
@@ -37,11 +38,10 @@
 
 <style scoped>
   #logo {
-    width: 120px;
-    height: 30px;
-    margin-left: 5vw;
+    margin-left: 4vw;
     margin-right: 3vw;
     cursor: pointer;
+    font-size: 20px;
   }
 
   .cursor-default {
