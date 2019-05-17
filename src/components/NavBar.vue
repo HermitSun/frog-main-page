@@ -28,7 +28,7 @@
       // 计算应该显示的导航
       navItems() {
         return this.$router.options.routes.filter(route => {
-          return route.path !== '/not-found' && !route.path.hidden;
+          return route.path !== '/not-found' && route.path !== '*' && !route.path.hidden;
         });
       }
     }
