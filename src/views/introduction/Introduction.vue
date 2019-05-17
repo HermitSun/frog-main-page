@@ -4,7 +4,8 @@
       <NavBar></NavBar>
     </el-header>
     <el-main>
-      <transition name="el-zoom-in-center">
+      <!--这里就不把这个页面单独提出一个路由了-->
+      <transition name="el-fade-in">
         <router-view></router-view>
       </transition>
     </el-main>

@@ -41,6 +41,14 @@
     font-size: 12px;
 }
 
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .inline-block {
     display: inline-block;
 }
