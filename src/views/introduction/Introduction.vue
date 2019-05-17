@@ -1,5 +1,5 @@
 <template>
-  <el-container id="app">
+  <el-container class="app">
     <el-header>
       <NavBar></NavBar>
     </el-header>
@@ -21,5 +21,13 @@
 </script>
 
 <style scoped>
+  .app {
+    background-color: #282c34;
+    height: 100vh;
+  }
 
+  .el-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
 </style>

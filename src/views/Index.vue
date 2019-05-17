@@ -9,9 +9,8 @@
       <img :src="require('assets/images/react-logo.svg')"
            class="rotate-logo"
            alt="logo"/>
-        <p class="code">欢迎！</p>
+      <p class="code">欢迎！</p>
       <router-link to="/introduction"
-                   style="padding: 1vw; border: 1px solid"
                    class="app-link">
         进一步了解...
       </router-link>
@@ -36,12 +35,12 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
     font-size: 60px;
     font-weight: bold;
-    margin: 5vw auto 2vw;
+    margin: 5vh auto 4vh;
   }
 
   .logo {
     position: absolute;
-    top: 3vw;
+    top: 5vh;
     left: 23vw;
   }
 
@@ -60,21 +59,23 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
     color: #61dafb;
     text-decoration: none;
-    margin-top: 2vw;
+    margin-top: 2vh;
     margin-right: 2vw;
     font-size: 24px;
+    padding: 1vw;
+    border: 2px solid;
   }
 
   .app-link:hover {
     color: #61dfff;
-    box-shadow: 0 2px 4px #61dafb, 0 0 6px #61dafb
+    box-shadow: 0 2px 4px #61daff, 0 0 6px #61daff
   }
 
   .rotate-logo {
     animation: rotate-logo-spin infinite 20s linear;
     height: 40vmin;
     pointer-events: none;
-    margin-top: -3vw;
+    margin-top: -3vh;
     margin-right: 2vw;
   }
 
