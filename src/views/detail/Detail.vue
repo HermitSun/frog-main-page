@@ -2,10 +2,10 @@
   <div class="app">
     <!--基本信息-->
     <div class="basic-info-wrapper">
-      <h1 class="title">- 关 于 我 们 -</h1>
+      <h1 class="title">- 公 司 简 介 -</h1>
       <el-card class="basic-info">
         <el-form label-position="right"
-                 label-width="10vw">
+                 label-width="6vw">
           <!--        <el-form-item>-->
           <!--          上海昱辰网络科技有限公司，致力于软件开发运营及推广。-->
           <!--        </el-form-item>-->

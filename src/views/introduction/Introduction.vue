@@ -7,17 +7,6 @@
       <!--这里就不把这个页面单独提出一个路由了，主要是懒-->
       <div v-if="$route.path === '/introduction'"
            class="introduction">
-        <br/>
-        <div class="introduction-content">
-          <div class="title">公司简介</div>
-          <br/>
-          <br/>
-          <p>
-            <template v-for="i in 100">
-              <span>三四百字</span>
-            </template>
-          </p>
-        </div>
         <!--轮播-->
         <el-carousel indicator-position="outside"
                      height="80vh"
@@ -28,6 +17,17 @@
                       style="width: 60vw; height: 80vh"></el-image>
           </el-carousel-item>
         </el-carousel>
+        <!--简介-->
+        <div class="basic-info-wrapper">
+          <h1 class="title">- 关 于 我 们 -</h1>
+          <ul style="text-align: left; margin-left: 33vw">
+            <li style="margin: 1vh auto">上海昱辰网络科技有限公司，致力于软件开发运营及推广。</li>
+            <li style="margin: 1vh auto">以人为本、开拓创新</li>
+            <li style="margin: 1vh auto">合作、共赢、整合、利他、互助、抱团、联盟</li>
+            <li style="margin: 1vh auto">只有合作伙伴，没有竞争对手</li>
+            <li style="margin: 1vh auto">将公司打造成军队般的执行力，学校般的学习力，家庭般的幸福工作环境</li>
+          </ul>
+        </div>
       </div>
       <transition name="el-fade-in">
         <router-view></router-view>
@@ -47,7 +47,7 @@
     },
     methods: {
       handleCarouselChange(newPage, oldPage) {
-
+        // 暂时不知道能干啥
       }
     }
   };
@@ -74,5 +74,13 @@
     top: 20vh;
     right: 10vw;
     z-index: 9999;
+  }
+
+  .basic-info-wrapper {
+    margin-top: 3vw;
+  }
+
+  .basic-info-wrapper .title {
+    margin-bottom: 2vw;
   }
 </style>
