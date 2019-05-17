@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import FooterBar from 'components/FooterBar.vue'
+  import FooterBar from '@/components/FooterBar.vue'
 
   export default {
     name: 'PageNotFound',
