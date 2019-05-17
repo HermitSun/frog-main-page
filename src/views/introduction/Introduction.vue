@@ -18,13 +18,14 @@
             </template>
           </p>
         </div>
+        <!--轮播-->
         <el-carousel indicator-position="outside"
                      height="80vh"
                      @change="handleCarouselChange">
-          <el-carousel-item v-for="item in 4" :key="item">
-            <el-image :src="require('./images/bg1.jpg')"
+          <el-carousel-item v-for="i in 3" :key="i">
+            <el-image :src="require(`./images/bg${i}.jpg`)"
                       alt="bg"
-                      style="height: 80vh"></el-image>
+                      style="width: 60vw; height: 80vh"></el-image>
           </el-carousel-item>
         </el-carousel>
       </div>
