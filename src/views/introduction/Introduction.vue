@@ -4,7 +4,30 @@
       <NavBar></NavBar>
     </el-header>
     <el-main>
-      <!--这里就不把这个页面单独提出一个路由了-->
+      <!--这里就不把这个页面单独提出一个路由了，主要是懒-->
+      <div v-if="$route.path === '/introduction'"
+           class="introduction">
+        <br/>
+        <div class="introduction-content">
+          <div class="title">公司简介</div>
+          <br/>
+          <br/>
+          <p>
+            <template v-for="i in 100">
+              <span>三四百字</span>
+            </template>
+          </p>
+        </div>
+        <el-carousel indicator-position="outside"
+                     height="80vh"
+                     @change="handleCarouselChange">
+          <el-carousel-item v-for="item in 4" :key="item">
+            <el-image :src="require('./images/bg1.jpg')"
+                      alt="bg"
+                      style="height: 80vh"></el-image>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
       <transition name="el-fade-in">
         <router-view></router-view>
       </transition>
@@ -17,7 +40,15 @@
 
   export default {
     name: "Introduction",
-    components: {NavBar}
+    components: {NavBar},
+    data() {
+      return {};
+    },
+    methods: {
+      handleCarouselChange(newPage, oldPage) {
+
+      }
+    }
   };
 </script>
 
@@ -30,5 +61,17 @@
   .el-header {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .introduction {
+    color: white;
+  }
+
+  .introduction-content {
+    width: 30vw;
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    z-index: 9999;
   }
 </style>

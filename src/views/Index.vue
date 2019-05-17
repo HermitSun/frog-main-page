@@ -5,15 +5,17 @@
                 class="logo"
                 alt="logo"></el-image>
     </header>
-    <main class="body">
-      <img :src="require('assets/images/react-logo.svg')"
-           class="rotate-logo"
-           alt="logo"/>
-      <p class="code">欢迎！</p>
-      <router-link to="/introduction"
-                   class="app-link">
-        进一步了解...
-      </router-link>
+    <main>
+      <div class="body">
+        <img :src="require('assets/images/react-logo.svg')"
+             class="rotate-logo"
+             alt="logo"/>
+        <p class="code">欢迎！</p>
+        <router-link to="/introduction"
+                     class="app-link">
+          进一步了解<i class="el-icon-right"></i>
+        </router-link>
+      </div>
     </main>
   </div>
 </template>
@@ -31,13 +33,6 @@
     text-align: center;
   }
 
-  .code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 60px;
-    font-weight: bold;
-    margin: 5vh auto 4vh;
-  }
-
   .logo {
     position: absolute;
     top: 5vh;
@@ -45,7 +40,8 @@
   }
 
   .body {
-    background-color: #282c34;
+    /*background-color: #282c34;*/
+    background-image: url("../assets/images/background.png");
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -55,19 +51,30 @@
     color: white;
   }
 
+  .code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 6vh auto 4vh;
+  }
+
   .app-link {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-    color: #61dafb;
     text-decoration: none;
-    margin-top: 2vh;
-    margin-right: 2vw;
+    color: #303133;
     font-size: 24px;
+    font-weight: bold;
+    margin-top: 10vh;
+    margin-right: 2vw;
     padding: 1vw;
-    border: 2px solid;
+    border-top: 2px dashed #61dafb;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px dashed black;
   }
 
   .app-link:hover {
-    color: #61dfff;
+    color: black;
     box-shadow: 0 2px 4px #61daff, 0 0 6px #61daff
   }
 
@@ -75,7 +82,7 @@
     animation: rotate-logo-spin infinite 20s linear;
     height: 40vmin;
     pointer-events: none;
-    margin-top: -3vh;
+    margin-top: 2vw;
     margin-right: 2vw;
   }
 
